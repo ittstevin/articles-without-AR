@@ -7,6 +7,7 @@ class Magazine
     def initialize(name, category)
       @name = name
       @category = category
+      @article = []
       @@all << self
     end
   

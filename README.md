@@ -1,31 +1,64 @@
-# articles-without-AR
+# Product-Review
+This repository contains an e-commerce domain that was developed to practice Active Record Migrations, Active Record Associations, Class and Instance Methods, and Active Record Querying in Ruby.
 
-This is a simple project that demonstrates the use of object-oriented programming concepts in Ruby. The project consists of three classes, Author, Magazine, and Article, and their respective methods. The classes have various associations and aggregate methods that allow for data retrieval and manipulation.
+## Tools Used
+This project was developed using the following tools:
 
-## Getting Started
+1. `Ruby ~ v3.1.+`
+## Topics Covered
+The following concepts were covered during the development of this project:
 
-To get started with this project, follow these steps:
+1. Active Record Migrations
+2. Active Record Associations
+3. Class and Instance Methods
+4. Active Record Querying
 
-1. Clone the repository to your local machine
-2. Open the project directory using a text editor
-3. Open a terminal window in the project directory
-4. Install any required gems by running `bundle install`
-5. Run the project by running the command `ruby environment/environment.rb`
+Documentation for the Ruby language can be found here: Ruby Docs
 
-- This will run the project's main files ;  Articles.rb ,  Author.rb , Magazine.rb and it will demonstrate the use of the classes and their methods.
+## Pre-requisites
+- To use this repository, you must have the following installed on your system:
 
-To use the project, you can modify the code in the ru.rb file to create new instances of the classes and call their respective methods. You can also create new helper methods if needed to aid in data retrieval and manipulation.
-The code is commented to explain what each part of the code does, and the various methods of the classes are documented to explain their purpose and usage.
-Contributing
-Contributions to this project are welcome. If you find a bug, have a suggestion, or want to add a feature, please create an issue or submit a pull request.
+- An OS (Windows 10+, Linux or MacOS, running on x86 or arm architecture)
+Ruby - 3.1.+
+## Installation
+To use this repository on your local machine, follow these simple steps:
 
-## License
+Open a terminal or command line interface on your computer
 
-This project is licensed under the ISC License. Feel free to use, modify, and distribute the code. See the LICENSE file for more information.
+Clone the repository by running the following command:
 
-Technologies used:
-- Ruby
+[Press here to clone](git@github.com:ittstevin/Product-Review.git) and 
+ wait for the repository to finish cloning on your local machine.
 
-## Author
+Change directory to the repository folder:
 
-Tevin Munene
+
+1. cd Product-Review 
+
+2. (Optional) Open the repository in Visual Studio Code:
+
+3.  Running the Application
+To run the application, follow these steps:
+
+Install the required dependencies using bundler:
+
+ - `bundle install`
+
+Run the following command to test out the different methods and associations:
+
+- `rake console`
+- Then use `Review.all` 
+
+- A pry prompt will appear where you can inspect the code by creating a product, review, and user, and retrieve their data using getters and perform Active Record methods.
+
+## Entity Relationship Diagram
+- The Entity Relationship Diagram below shows how the different models are associated:
+
+## Entity Relationship Diagram
+
+- A one-to-many relationship exists, meaning that one product or user can have many reviews.
+- A many-to-many relationship exists, meaning that a user can have many products, and a product can have many users.
+## Authors
+This project was contributed to by:
+
+[Tevin Munene](https://github.com/ittstevin)
