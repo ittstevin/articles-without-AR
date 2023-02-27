@@ -1,6 +1,3 @@
-ENV["RACK_ENV"] ||= "development"
-
-require 'bundler/setup'
-Bundler.require(:default, ENV["RACK_ENV"])
-
-require_all 'app/models'
+require_relative '../lib/article.rb'
+require_relative '../lib/author.rb'
+require_relative '../lib/magazine.rb'

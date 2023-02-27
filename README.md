@@ -1,64 +1,53 @@
-# Product-Review
-This repository contains an e-commerce domain that was developed to practice Active Record Migrations, Active Record Associations, Class and Instance Methods, and Active Record Querying in Ruby.
+# Magazine App
+This project is a Ruby application for managing a Magazine domain, including the relationships between Authors, Articles, and Magazines. It includes various classes and methods for creating and managing instances of these objects.
 
-## Tools Used
-This project was developed using the following tools:
-
-1. `Ruby ~ v3.1.+`
-## Topics Covered
-The following concepts were covered during the development of this project:
-
-1. Active Record Migrations
-2. Active Record Associations
-3. Class and Instance Methods
-4. Active Record Querying
-
-Documentation for the Ruby language can be found here: Ruby Docs
-
-## Pre-requisites
-- To use this repository, you must have the following installed on your system:
-
-- An OS (Windows 10+, Linux or MacOS, running on x86 or arm architecture)
-Ruby - 3.1.+
 ## Installation
-To use this repository on your local machine, follow these simple steps:
+1. Clone this repository to your local machine.
+2. Navigate to the root directory of the project.
+3. Run bundle install to install the necessary gems
+4. To start the application, run `ruby bin/run `from the command line
+## Usage
+Once the application is running, you can create instances of the various classes and try out the methods that are available.
 
-Open a terminal or command line interface on your computer
+## Classes
+The application includes the following classes:
 
-Clone the repository by running the following command:
+- Author
+- Article
+- Magazine
+## Methods
+The application includes the following methods:
 
-[Press here to clone](git@github.com:ittstevin/Product-Review.git) and 
- wait for the repository to finish cloning on your local machine.
+For Author class:
 
-Change directory to the repository folder:
+- initialize(name) - initializes a new author instance with the given name
+- name - returns the name of the author
+- articles - returns an array of articles written by the author
+- magazines - returns an array of unique magazines the author has contributed to
+ - add_article(magazine, title) - creates a new article instance and associates it with the author and magazine
+- topic_areas - returns an array of unique categories of the magazines the author has contributed to 
+For Article class:
+
+- initialize(author, magazine, title) - initializes a new article instance with the given author, magazine, and title
+- title - returns the title of the article
+- author - returns the author of the article
+- magazine - returns the magazine of the article
+For Magazine class:
+
+- initialize(name, category) - initializes a new magazine instance with the given name and category
+- name - returns the name of the magazine
+- category - returns the category of the magazine
+- contributors - returns an array of authors who have written for this magazine
+::all - returns an array of all magazine instances
+::find_by_name(name) - returns the first magazine object that matches the given name
+- article_titles - returns an array of strings of the titles of all articles written for this magazine
+- contributing_authors - returns an array of authors who have written more than 2 articles for the magazine
+Contributing
+Bug reports and pull requests are welcome on GitHub at [Tevin Munene](git@github.com:ittstevin/articles-without-AR.git). 
+- This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+### License
+The project is available as open source under the terms of the MIT License.
 
 
-1. cd Product-Review 
 
-2. (Optional) Open the repository in Visual Studio Code:
-
-3.  Running the Application
-To run the application, follow these steps:
-
-Install the required dependencies using bundler:
-
- - `bundle install`
-
-Run the following command to test out the different methods and associations:
-
-- `rake console`
-- Then use `Review.all` 
-
-- A pry prompt will appear where you can inspect the code by creating a product, review, and user, and retrieve their data using getters and perform Active Record methods.
-
-## Entity Relationship Diagram
-- The Entity Relationship Diagram below shows how the different models are associated:
-
-## Entity Relationship Diagram
-
-- A one-to-many relationship exists, meaning that one product or user can have many reviews.
-- A many-to-many relationship exists, meaning that a user can have many products, and a product can have many users.
-## Authors
-This project was contributed to by:
-
-[Tevin Munene](https://github.com/ittstevin)
